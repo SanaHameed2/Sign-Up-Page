@@ -1,0 +1,19 @@
+*{
+    margin: 0
+    padding: 0
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:80vh;
+    width: 40%;
+    color: white;
+    background: linear-gradient(to bottom, #a3a3d8, #16213e);
+    border-radius:35px;
+
+}
