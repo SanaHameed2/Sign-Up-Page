@@ -1,42 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>Signup Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <!-- // head -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navigation ----- -->
-    <nav class="navbar">
-        <img src="back-arrow.png" alt="Back Arrow">
-        <a href="#">Home</a>
-    </nav>
 
-    <!-- Main Container ----- -->
-    <div class="main-container">
-        <!-- Signup Card ----- -->
-        <div class="card">
-            <img src="logo.png" alt="Logo">
-            <h1>Create new account</h1>
-            <!-- Signup Buttons ----- -->
-            <button class="Signup-btn1">
-                <img src="google-icon.png" alt="Google Icon">
-                Sign up with Google
-            </button>
-            <button class="Signup-btn2">
-                <img src="github-icon.png" alt="GitHub Icon">
-                Sign up with GitHub
-            </button>
-        </div>
+  <!-- // nav -->
+  <nav class="nav">
+    <a href="#">
+      <i class="fas fa-arrow-left"></i> Home
+    </a>
+  </nav>
+
+  <!-- // wrapper -->
+  <div class="wrapper">
+
+    <!-- // card -->
+    <div class="card">
+
+      <!-- // header -->
+      <div class="header">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h1>Create your account</h1>
+      </div>
+
+      <!-- // buttons -->
+      <button class="btn google">
+        <i class="fab fa-google"></i> Sign up with Google
+      </button>
+
+      <button class="btn github">
+        <img src="github-logo.png" alt="GitHub" /> Sign up with GitHub
+      </button>
+      
     </div>
 
-    <!-- Sign in Link ----- -->
+    <!-- // signin -->
     <p class="signin">
-        Already have an account?
-        <a href="#">Sign in</a>
+      Already have an account? <a href="#">Sign in</a>
     </p>
+
+  </div>
+
 </body>
 </html>
