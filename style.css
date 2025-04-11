@@ -78,8 +78,6 @@ body {
   border: 1px solid #6221f0;
   border-radius: 8px;
   background: #0a0a0a;
-  display: flex;
-  align-items: center;
   font-weight: 500;
   cursor: pointer;
   color: white;
