@@ -1,17 +1,61 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html,
 body {
-  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #f5f5f7;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  width: 100%;
+}
+
+/* container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  height: 96vh;
+  max-width: 350px;
+  padding: 30px 0;
+  background: #52578a;
+  background: linear-gradient(
+    46deg,
+    rgba(13, 14, 25, 1) 53%,
+    rgba(83, 78, 179, 1) 79%,
+    rgba(191, 186, 228, 1) 100%
+  );
+  border-radius: 5px;
+}
+
+/* nav */
+nav {
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #d4cfcf;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+nav i {
+  margin-right: 6px;
 }
 
 /* wrapper */
@@ -19,53 +63,63 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* nav */
-.nav {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.nav i {
-  margin-right: 6px;
+  width: 90%;
 }
 
 /* card */
 .card {
-  background: #f3a1a1;
-  border-radius: 12px;
-  padding: 30px 30px 70px 30px;
-  width: 90%;
-  max-width: 360px;
-  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 30px 15px;
+  width: 300px;
+  height: 340px;
   text-align: left;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(42, 35, 35, 0.1);
+  margin-bottom: 15px;
+  gap: 40px;
+  background: #0d0e19;
+  background: linear-gradient(
+    31deg,
+    rgba(13, 14, 25, 1) 0%,
+    rgba(81, 77, 176, 1) 67%,
+    rgba(83, 78, 179, 1) 0%,
+    rgba(191, 186, 228, 1) 100%
+  );
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3), 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* header */
 .header {
   display: flex;
   flex-direction: column;
-  margin-bottom: 70px;
 }
 
 .logo {
-  margin-bottom: 12px;
   width: 32px;
   height: 32px;
 }
 
+.header h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-left: 4px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
 
 /* buttons */
 .btn {
@@ -73,38 +127,60 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border: 1px solid #6221f0;
+  padding: 12px 12px;
+  border: 1px solid #5c21db;
   border-radius: 8px;
   background: #0a0a0a;
-  display: flex;
-  align-items: center;
   font-weight: 500;
   cursor: pointer;
   color: white;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn:first-of-type {
+  margin-top: 40px;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #231050, #21143b);
+  color: #fff;
+  border-color: #cdc3e3;
 }
 
 .btn i,
 .btn img {
-  margin-right: 10px;
+  margin-right: 6px;
   width: 18px;
   height: 18px;
+  display: flex;
+  align-items: center;
 }
 
 /* signin */
 .signin {
-  margin-top: 20px;
   font-size: 14px;
-  color: #555;
+  color: #ccc;
+  text-align: center;
 }
 
 .signin a {
-  color: #000;
+  color: #fff;
   font-weight: 500;
   text-decoration: none;
 }
 
 .signin a:hover {
   text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .card {
+    padding: 24px;
+  }
 }
